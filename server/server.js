@@ -24,7 +24,7 @@ const startApolloServer = async () => {
   app.use(express.json())
 
   app.use(
-    'wss://localhost:3001/graphql',
+    '/graphql',
     expressMiddleware(server, {
       context: authMiddleware,
     })
